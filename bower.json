@@ -1,0 +1,23 @@
+{
+  "name": "restaurant-search",
+  "authors": [
+    "Chris Lush <chris@codevate.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "select2": "^4.0.3",
+    "select2-bootstrap-theme": "^0.1.0-beta.9"
+  }
+}

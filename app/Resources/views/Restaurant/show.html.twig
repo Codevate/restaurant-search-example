@@ -1,0 +1,7 @@
+{% extends '::base.html.twig' %}
+
+{% block content %}
+  <h1>{{ restaurant.name|title }}</h1>
+  <p>City: {{ restaurant.city }}</p>
+  <p>Style: {{ restaurant.styles|join(', ') }}</p>
+{% endblock %}
