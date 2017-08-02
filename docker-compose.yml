@@ -1,0 +1,42 @@
+version: '2'
+services:
+    db:
+        image: mysql
+        ports:
+            - "3307:3306"
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: symfony
+            MYSQL_USER: symfony
+            MYSQL_PASSWORD: symfony
+    php:
+        build: ./docker/php-fpm
+        expose:
+            - "9000"
+        volumes:
+            - ./:/var/www/symfony
+            - ./docker/logs/symfony:/var/www/symfony/app/logs
+        links:
+            - db
+    nginx:
+        build: ./docker/nginx
+        ports:
+            - "81:80"
+        links:
+            - php
+        volumes_from:
+            - php
+        volumes:
+            - ./docker/logs/nginx/:/var/log/nginx
+    elk:
+        image: sebp/elk
+        ports:
+            - "5602:5601"
+        volumes_from:
+            - php
+            - nginx
+    node:
+        build: ./docker/node
+        volumes_from:
+            - php
+        tty: true

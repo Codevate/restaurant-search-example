@@ -16,3 +16,4 @@
 .idea/vcs.xml
 .idea/jsLibraryMappings.xml
 web/bower_components/
+docker/logs/
