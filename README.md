@@ -58,7 +58,7 @@ docker-compose exec php bash
 ### Usage
 
 - <http://restaurant-search.dev:81> to visit the Symfony app.
-- <http://restaurant-search.dev:5602> to visit Kibana (the "Dev Tools" side-menu option has replaced Kibana Sense).
+- <http://restaurant-search.dev:5602> to visit Kibana (the "Dev Tools" side-menu option has replaced Elastic Sense).
 - Logs for Symfony and Nginx are in `docker/logs`.
 - `docker-compose down` when you're finished.
 
