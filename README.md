@@ -30,7 +30,7 @@ docker-compose up -d
 
 Add `restaurant-search.dev` to your hosts file:
 
-```
+```bash
 # Unix only: use this command to get the right IP, OSX binds to localhost
 docker network inspect restaurantsearch_default | grep Gateway
 sudo sh -c 'echo "127.0.0.1 restaurant-search.dev\n" >> /etc/hosts'
@@ -38,7 +38,7 @@ sudo sh -c 'echo "127.0.0.1 restaurant-search.dev\n" >> /etc/hosts'
 
 Update `parameters.yml` to use the networked containers:
 
-```
+```yaml
 parameters:
     database_host: db
     # ...
