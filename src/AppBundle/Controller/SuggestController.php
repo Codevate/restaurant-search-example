@@ -37,8 +37,8 @@ class SuggestController extends Controller
       foreach ($suggests as $suggest) {
         foreach ($suggest['options'] as $option) {
           $suggestions[] = array(
-            'id' => $option['payload']['id'],
-            'text' => $option['text']
+            'id' => $option['_source']['id'],
+            'text' => $option['_source']['name']
           );
         }
       }

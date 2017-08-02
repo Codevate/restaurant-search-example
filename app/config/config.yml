@@ -86,12 +86,15 @@ fos_elastica:
                                 filter: [standard, lowercase, asciifolding, elision]
             types:
                 restaurant:
-                    mappings:
+                    properties:
                         name_suggest:
                             type: completion
                             analyzer: name_analyzer
                             search_analyzer: name_analyzer
-                            payloads: true
+                        id:
+                            type: keyword
+                        name:
+                            type: keyword
                     persistence:
                         driver: orm
                         model: AppBundle\Entity\Restaurant

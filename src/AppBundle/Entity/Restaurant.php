@@ -69,11 +69,7 @@ class Restaurant
         ),
         $this->getStyles()
       ),
-      'output' => $this->getName(),
       'weight' => $this->calculateWeight(),
-      'payload' => array(
-        'id' => $this->getId(),
-      ),
     );
   }
 
