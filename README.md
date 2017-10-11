@@ -64,4 +64,4 @@ docker-compose exec php bash
 
 ## About Codevate
 
-Codevate is a specialist [app development company](https://www.codevate.com/) that builds cloud-connected software. This repository was created for a blog post about a [custom web application development](https://www.codevate.com/services/web-development) project and was written by Chris Lush.
+Codevate is a specialist [UK mobile app development company](https://www.codevate.com/) that builds cloud-connected software. This repository was created for a blog post about a [custom web application development](https://www.codevate.com/services/web-development) project and was written by Chris Lush.
